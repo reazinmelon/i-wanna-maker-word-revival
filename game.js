@@ -31,7 +31,7 @@ const spawn = { x: 48, y: 420 };
 const goal = { x: 890, y: 376, w: 42, h: 88 };
 const platforms = [
   { x: 0, y: 496, w: 960, h: 44 },
-  { x: 158, y: 410, w: 92, h: 18 },
+  { x: 166, y: 410, w: 104, h: 18 },
   { x: 322, y: 354, w: 78, h: 18 },
   { x: 478, y: 302, w: 72, h: 18 },
   { x: 636, y: 250, w: 68, h: 18 },
@@ -43,7 +43,7 @@ const fakePlatforms = [
   { x: 872, y: 420, w: 36, h: 18, triggerX: 842, vanishAfter: 18, resetAfter: 150 }
 ];
 const spikes = [
-  { x: 104, y: 466, w: 34, h: 30 },
+  { x: 124, y: 466, w: 22, h: 30 },
   { x: 258, y: 466, w: 70, h: 30 },
   { x: 404, y: 466, w: 86, h: 30 },
   { x: 562, y: 466, w: 98, h: 30 },
@@ -55,7 +55,7 @@ const spikes = [
   { x: 812, y: 390, w: 36, h: 30 }
 ];
 const trapSpikes = [
-  { x: 134, y: 466, w: 32, h: 30, triggerX: 118, triggerY: 470, delay: 16, activeFor: 120 },
+ { x: 168, y: 466, w: 24, h: 30, triggerX: 160, triggerY: 470, delay: 24, activeFor: 96 },
   { x: 410, y: 466, w: 46, h: 30, triggerX: 344, triggerY: 370, delay: 10, activeFor: 132 },
   { x: 590, y: 272, w: 28, h: 30, triggerX: 548, triggerY: 324, delay: 8, activeFor: 118 },
   { x: 858, y: 466, w: 34, h: 30, triggerX: 834, triggerY: 442, delay: 6, activeFor: 160 }
