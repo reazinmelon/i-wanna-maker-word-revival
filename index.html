@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I Wanna Maker Word Revival</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="topbar" aria-label="game status">
+        <div>
+          <p class="eyebrow">I Wanna Maker x Vocabulary</p>
+          <h1>死一次，背 3 个单词复活</h1>
+        </div>
+        <div class="stats">
+          <span>死亡 <strong id="deathCount">0</strong></span>
+          <span>复活 <strong id="reviveCount">0</strong></span>
+          <span>进度 <strong id="wordProgress">0/3</strong></span>
+        </div>
+      </section>
+
+      <section class="stage-wrap" aria-label="platform game">
+        <canvas id="game" width="960" height="540"></canvas>
+        <div class="hud">
+          <span>← → 移动</span>
+          <span>空格 / ↑ 跳跃</span>
+          <span>R 重开</span>
+        </div>
+      </section>
+    </main>
+
+    <section class="revive-panel hidden" id="revivePanel" aria-live="polite">
+      <div class="revive-card">
+        <div class="revive-head">
+          <div>
+            <p class="eyebrow">Revive Drill</p>
+            <h2>背完 3 个词才能复活</h2>
+          </div>
+          <span id="cardIndex">1 / 3</span>
+        </div>
+
+        <div class="word-card">
+          <div class="word-main">
+            <p id="wordText">kick off</p>
+            <div class="voice-actions" aria-label="朗读">
+              <button id="speakBtn" type="button" title="朗读单词">WORD</button>
+              <button id="speakExampleBtn" type="button" title="朗读例句">SENT</button>
+            </div>
+          </div>
+          <p id="phoneticText">/kɪk ɔf/</p>
+        </div>
+
+        <div class="prompt">
+          <p>选择正确中文意思</p>
+          <div id="choices" class="choices"></div>
+        </div>
+
+        <div class="example-box hidden" id="exampleBox">
+          <p id="meaningText"></p>
+          <p id="exampleText"></p>
+          <p id="exampleCnText"></p>
+        </div>
+
+        <div class="revive-actions">
+          <button id="nextWordBtn" type="button" disabled>下一个</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="win-panel hidden" id="winPanel" aria-live="polite">
+      <div class="win-card">
+        <p class="eyebrow">Clear</p>
+        <h2>通关了，词也背了</h2>
+        <p>你已经完成测试关卡。下一步可以继续加词库、关卡编辑器和更多死亡点。</p>
+        <button id="playAgainBtn" type="button">再来一局</button>
+      </div>
+    </section>
+
+    <script src="./words.js"></script>
+    <script src="./game.js"></script>
+  </body>
+</html>
