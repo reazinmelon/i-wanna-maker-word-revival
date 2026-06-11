@@ -245,24 +245,30 @@ canvas {
 .choices {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  gap: 18px 22px;
 }
 
 .choice {
-  min-height: 58px;
+  min-height: 74px;
   border: 3px solid #05070b;
   background: #252d3b;
-  box-shadow: 4px 4px 0 #05070b;
-  padding: 12px;
+  box-shadow: 6px 6px 0 #05070b;
+  color: #f4f7fb;
+  padding: 16px 18px;
   text-align: left;
+  line-height: 1.35;
   transition:
     transform 80ms linear,
     box-shadow 80ms linear;
 }
 
+.choice:disabled {
+  opacity: 1;
+}
+
 .choice:not(:disabled):hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #05070b;
+  transform: translate(3px, 3px);
+  box-shadow: 3px 3px 0 #05070b;
 }
 
 .choice.correct {
@@ -274,6 +280,7 @@ canvas {
 .choice.wrong {
   border-color: #05070b;
   background: var(--danger);
+  color: #ffffff;
 }
 
 .example-box {
